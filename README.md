@@ -190,7 +190,7 @@ pip install -r requirements.txt
 
 ---
 
-![Game](docs/2.png)
+![Game](docs/2.jpg)
 
 ## ⚙️ 配置说明
 

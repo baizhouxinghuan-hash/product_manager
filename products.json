@@ -1,0 +1,68 @@
+[
+  {
+    "id": 0,
+    "name": "智能手表",
+    "description": "支持心率监测、运动记录和消息提醒的智能手表",
+    "price": 999.0,
+    "image": "smartwatch.jpg",
+    "importance": 0.9,
+    "active": true,
+    "allow_auto_inject": true,
+    "aliases": [
+      "手表",
+      "智能表"
+    ],
+    "status": "on_shelf"
+  },
+  {
+    "id": 1,
+    "name": "智能音箱",
+    "description": "支持语音助手、音乐播放和家居控制的智能音箱",
+    "price": 799.0,
+    "image": "speaker.jpg",
+    "importance": 0.9,
+    "active": true,
+    "allow_auto_inject": false,
+    "aliases": [
+      "音箱",
+      "智能音箱"
+    ],
+    "status": "on_shelf"
+  },
+  {
+    "id": 2,
+    "name": "谷歌牌方便面",
+    "description": "老人小孩都喜欢吃，营养美味",
+    "price": 5414.0,
+    "image": "22040289_332a4bd7dcd6123a8e6e7d98e22697ef.jpeg",
+    "importance": 0.9,
+    "active": true,
+    "allow_auto_inject": true,
+    "aliases": [],
+    "status": "on_shelf"
+  },
+  {
+    "id": 3,
+    "name": "菜单1",
+    "description": "首页机器人指令菜单",
+    "price": 0.0,
+    "image": "81367132_6F7569272AAC9A32DF8393889B9F3A45.jpg",
+    "importance": 0.9,
+    "active": true,
+    "allow_auto_inject": true,
+    "aliases": [],
+    "status": "on_shelf"
+  },
+  {
+    "id": 4,
+    "name": "菜单2",
+    "description": "指令菜单",
+    "price": 0.0,
+    "image": "51727850_93465FD6D35770DEAC229ECCB49675AC.jpg",
+    "importance": 0.9,
+    "active": true,
+    "allow_auto_inject": true,
+    "aliases": [],
+    "status": "on_shelf"
+  }
+]

@@ -1,0 +1,16 @@
+# AstrBot 框架（由 AstrBot 主程序提供，无需手动安装）
+# astrbot
+
+# WebUI 依赖
+flask>=2.0.0
+waitress>=2.0.0
+
+# 标准库（无需安装）
+# - os
+# - json
+# - re
+# - threading
+# - asyncio
+# - random
+# - string
+# - datetime

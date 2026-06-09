@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>商品管理后台</title>
+<style>
+body { font-family:"Microsoft YaHei"; background:#f5f5f5; margin:0; padding:0; }
+header { background:#3498db; color:white; padding:20px; text-align:center; font-size:24px; }
+.container { margin:20px auto; width:90%; background:white; padding:20px; border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.2); }
+table { width:100%; border-collapse:collapse; }
+th,td { padding:12px; text-align:center; border-bottom:1px solid #ddd; }
+th { background:#f2f2f2; }
+img { max-width:80px; max-height:80px; border-radius:6px; }
+.btn { padding:6px 12px; border:none; border-radius:6px; cursor:pointer; color:white; font-weight:bold; }
+.btn-delete { background:#e74c3c; }
+.btn-toggle { background:#3498db; }
+.btn-add { background:#2ecc71; text-decoration:none; padding:10px 20px; display:inline-block; margin-bottom:15px; }
+.status-active { color:green; font-weight:bold; }
+.status-inactive { color:red; font-weight:bold; }
+</style>
+</head>
+<body>
+<header>商品管理后台</header>
+<div class="container">
+<a href="{{ url_for('add_product_page') }}" class="btn-add">添加新商品</a>
+<a href="{{ url_for('change_password') }}" class="btn-add" style="background:#f39c12;">修改密码</a>
+<table>
+<thead>
+<tr>
+<th>ID</th><th>图片</th><th>名称</th><th>介绍</th><th>价格</th><th>重要度</th><th>状态</th><th>操作</th>
+</tr>
+</thead>
+<tbody>
+{% for product in products %}
+<tr>
+<td>{{ loop.index0 }}</td>
+<td>{% if product.image %}<img src="{{ url_for('images', filename=product.image) }}">{% else %}无{% endif %}</td>
+<td>{{ product.name }}</td>
+<td>{{ product.description }}</td>
+<td>{{ product.price }}</td>
+<td>{{ product.importance }}</td>
+<td>{% if product.active %}<span class="status-active">上架</span>{% else %}<span class="status-inactive">下架</span>{% endif %}</td>
+<td>
+<a href="{{ url_for('toggle_product', product_id=loop.index0) }}" class="btn btn-toggle">切换上下架</a>
+<a href="{{ url_for('delete_product', product_id=loop.index0) }}" class="btn btn-delete" onclick="return confirm('确认删除？')">删除</a>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</body>
+</html>
+

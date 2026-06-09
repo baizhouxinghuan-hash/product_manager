@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project Specific
+webui/webui_pass.txt
+webui/static/uploads/*
+!webui/static/uploads/.gitkeep
+webui/images/*
+!webui/images/.gitkeep
+data/*
+!data/.gitkeep
+config/product_manager_config.json
+*.log
+
+# Environment
+.env
+.env.local

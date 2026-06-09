@@ -1,0 +1,59 @@
+{
+  "max_match_products": {
+    "description": "LLM 自动注入商品时最多匹配几个商品",
+    "type": "int",
+    "default": 3,
+    "hint": "控制在对话中最多注入多少相似商品信息",
+    "slider": {
+      "min": 1,
+      "max": 10,
+      "step": 1
+    }
+  },
+  "enable_rotation": {
+    "description": "是否轮换匹配的商品（避免总是第一个）",
+    "type": "bool",
+    "default": true,
+    "hint": "开启后，每次匹配商品会轮换顺序，避免总是注入第一个商品"
+  },
+  "webui_password": {
+    "description": "WebUI 登录密码",
+    "type": "string",
+    "default": "",
+    "hint": "为空时插件会随机生成密码并打印在日志中"
+  },
+  "webui_background_image": {
+    "description": "WebUI 背景图片文件名",
+    "type": "string",
+    "default": "background.jpg",
+    "hint": "将背景图片放到 webui/static 目录下，支持 jpg/png 格式"
+  },
+  "personas": {
+    "description": "多 persona 列表，可在插件内切换",
+    "type": "list",
+    "items": {
+      "name": {
+        "description": "persona 名称",
+        "type": "string",
+        "default": "默认"
+      },
+      "style": {
+        "description": "persona 风格描述",
+        "type": "string",
+        "default": "中性"
+      }
+    },
+    "default": [
+      {"name": "默认", "style": "中性"}
+    ],
+    "hint": "可在对话中切换 persona 风格，例如“活泼”、“专业”、“幽默”等"
+  },
+  "allow_auto_inject": {
+    "description": "是否允许 LLM 自动提及商品",
+    "type": "bool",
+    "default": true,
+    "hint": "关闭后商品只允许通过命令查看，不会被 LLM 主动注入对话"
+  }
+}
+
+

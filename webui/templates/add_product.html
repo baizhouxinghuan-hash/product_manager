@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>添加新商品</title>
+<style>
+body { font-family:"Microsoft YaHei"; display:flex; justify-content:center; align-items:center; height:100vh; background:#f0f2f5; }
+.box { background:white; padding:40px; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.3); width:400px; text-align:center; }
+input,textarea { width:100%; padding:10px; margin:10px 0; border-radius:6px; border:1px solid #ccc; }
+button { width:100%; padding:10px; border:none; border-radius:6px; background:#2ecc71; color:white; font-weight:bold; cursor:pointer; }
+a { display:inline-block; margin-top:10px; color:#3498db; text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>添加新商品</h2>
+<form method="post" action="{{ url_for('add_product') }}" enctype="multipart/form-data">
+<input type="text" name="name" placeholder="商品名称" required>
+<textarea name="description" placeholder="商品介绍" rows="3"></textarea>
+<input type="text" name="price" placeholder="价格" required>
+<input type="file" name="image">
+<button type="submit">添加商品</button>
+</form>
+<a href="{{ url_for('index') }}">返回首页</a>
+</div>
+</body>
+</html>

@@ -306,5 +306,5 @@ AstrBot 加载插件
 
 ## 📬 联系方式
 
-- 项目地址：[GitHub](https://github.com/your-username/product_manager)
-- 问题反馈：[Issues](https://github.com/your-username/product_manager/issues)
+- 项目地址：[GitHub](https://github.com/baizhouxinghuan-hash/product_manager)
+- 问题反馈：[Issues](https://github.com/baizhouxinghuan-hash/product_manager/issues)
